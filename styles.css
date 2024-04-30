@@ -1,0 +1,19 @@
+.container {
+  margin: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: 1fr;
+  counter-reset:div;
+}
+
+.animation-item {
+  height: 300px;
+}
+
+.animation-item:before {
+  counter-increment:div;
+  content:counter(div);
+  margin:auto;
+  font-size:40px;
+}
